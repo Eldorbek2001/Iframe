@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Push Pop</title>
+  </head>
+  <style>
+    p{
+      display: inline-block;
+    }
+
+  </style>
+  <body>
+
+    <p>Push <input type="text" id="inputArea"></p>
+    <button type="button" name="button" onclick="itemRemover()">Pop</button>
+<ul id="unorderedList">
+</ul>
+
+
+<script>
+var elements = [];
+  document.getElementById('inputArea').onkeydown = function(event) {
+      if (event.keyCode == 13) {
+        var inputValue = document.getElementById("inputArea").value;
+        document.getElementById("inputArea").value = "";
+        elements.unshift(inputValue);
+        writer();
+      }
+  }
+  function writer(){
+    document.getElementById('unorderedList').innerHTML = '';
+    for(var i = 0; i<elements.length; i++){
+      document.getElementById('unorderedList').innerHTML=
+      document.getElementById('unorderedList').innerHTML +
+       `<li>${elements[i]}</li>`
+    }
+  }
+
+  function itemRemover(){
+    elements.shift();
+    writer();
+  }
+</script>
+  </body>
+</html>

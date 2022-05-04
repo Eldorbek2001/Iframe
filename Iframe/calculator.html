@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ali Elbekov</title>
+    <title></title>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <p>Enter x: <input type="text" name="y" id="x"><br></p>
+    <p>Enter y: <input type="text" name="x" id="y"><br></p>
+    <button type="button" name="button" onclick="calculate()">Show results</button>
+    <p></p>
+    <p></p>
+    <div id="outcome">
+
+    </div>
+    <script>
+    function calculate(){
+      var x=document.getElementById("x").value
+      var y = document.getElementById("y").value
+      x = Number(x);
+      y = Number(y);
+      var adding = ` ${x} + ${y} = `+(x+y);
+      var substracting = ` ${x} - ${y} = `+(x-y);
+      var multiplying = ` ${x} * ${y} = `+(x*y);
+      var dividing = ` ${x} / ${y} = `+ (x/y);
+      var modulo  = ` ${x} % ${y} = `+(x%y);
+      var printData = [adding, substracting, multiplying, dividing, modulo];
+      divElement = document.getElementById("outcome");
+      var str = "";
+      for(var i = 0; i<printData.length; i++){
+          str+=printData[i]+"</br>"
+      }
+      divElement.innerHTML = str;
+    }
+
+    </script>
+
+  </body>
+</html>

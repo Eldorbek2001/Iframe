@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pixel Increase</title>
+  </head>
+  <body>
+    <button type="button" name="button" onclick="incrementFontSize()">
+      Increment by 1px</button>
+    <br>
+    <p id="data">Increase my point size by 1px each click</p>
+    <script>
+      var currentValue = 18;
+      function incrementFontSize(){
+      currentValue++;
+      document.getElementById('data').style.fontSize = currentValue+"px";
+    }
+    </script>
+
+  </body>
+</html>

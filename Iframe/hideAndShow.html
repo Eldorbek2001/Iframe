@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hide and Show</title>
+  </head>
+  <style>
+  div{
+    padding-top: 14px;
+  }
+
+  </style>
+  <body>
+    <button type="button" name="button" id="btn" onclick="hider()">Hide</button>
+    <div id="textToShow">This text will appear and disappear
+    </div>
+        <script>
+          function hider(){
+
+          var buttonInnerText = document.getElementById('btn');
+          if(buttonInnerText.innerHTML==="Hide"){
+            buttonInnerText.innerHTML = "Show";
+            var theText = document.getElementById("textToShow");
+            theText.innerHTML = "";
+          }else{
+            buttonInnerText.innerHTML = "Hide";
+            var theText = document.getElementById("textToShow");
+            theText.innerHTML = "This text will appear and disappear";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Growing Image</title>
+    <style media="screen">
+      img{
+        height: 60px;
+        width: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="error.png" alt="error.png" onclick="zoomIn()" id = "image">
+    </div>
+
+<script>
+  function zoomIn(){
+    var image = document.getElementById("image");
+    var currentWidth = image.clientWidth;
+    var currentHeight = image.clientHeight;
+    image.style.width = `${currentWidth+20}px`;
+    image.style.height = `${currentHeight+20}px`;
+  }
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Change 7 Styles</title>
+
+  <style media="screen">
+  .data{
+    display:inline-block;
+  }
+  </style>
+
+
+  </head>
+  <body>
+    <h1 onclick="styleChanger()">Click this text</h1>
+    <hr>
+    <div id="theBox">
+    <p id="data">Click "Click this text" above to change this div in several ways</p>
+    </div>
+
+<script>
+  function styleChanger(){
+    console.log("that thing got clicked");
+    var theData = document.getElementById("data");
+    console.log(theData);
+    theData.innerHTML="Change innerHTML. font 24px, border 5px, width 300px"+
+    " float right, padding 50px, background Light Gray, border Solid";
+    var theBox = document.getElementById("theBox");
+    theBox.style.backgroundColor = "LightGray";
+    theBox.style.fontSize = "24px";
+    theBox.style.color = "green";
+    theBox.style.border = "solid";
+    theBox.style.borderWidth= "5px";
+    theBox.style.borderColor= "red";
+    theBox.style.float = "right";
+    theBox.style.width = "300px";
+    theBox.style.padding = "50px";
+  }
+</script>
+</body>
+</html>

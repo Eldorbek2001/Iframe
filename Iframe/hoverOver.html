@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hover over</title>
+  <style>
+    div{
+      text-align: center;
+      border: solid;
+      border-width:20px;
+      border-color: red;
+      background-color: pink;
+      height: 72px;
+      width: 560px;
+      margin-bottom: 40px;
+      margin-top:40px;
+      font-size: 60px;
+    }
+  </style>
+  </head>
+  <body>
+  <div id="boxTop" onmouseover="topBoxOver()" onmouseout="topBoxOut()">
+    Hover over me
+  </div>
+  <div id="boxBottom">
+  </div>
+  <script>
+  var eventsNumber = 0;
+
+
+  function topBoxOver(){
+      var bottomBox = document.getElementById("boxBottom")
+      eventsNumber++;
+      bottomBox.innerHTML =`Entered ${eventsNumber} events`;
+  }
+
+  function topBoxOut(){
+    var bottomBox = document.getElementById("boxBottom")
+    eventsNumber++;
+    bottomBox.innerHTML=`Exited ${eventsNumber} events`;
+  }
+
+
+  </script>
+
+
+  </body>
+</html>

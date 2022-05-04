@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Event Driven JS</title>
+  </head>
+<style>
+  button{
+    margin:10px 0 10px 8px;
+    padding: 4px 8px 4px 8px;
+    display: block;
+  }
+  p{
+    padding: 6px 0 6px 0;
+  }
+  .topBar{
+    background-color: blue;
+    color: white;
+    font-size:22px;
+    text-align:center;
+  }
+  .bottomBar{
+    background-color: blue;
+    color: white;
+    font-size:22px;
+    text-align:center;
+  }
+  .buttons{
+    width:200px;
+    height:700px;
+    background-color: LightGray;
+    display: inline-block;
+    float:left;
+    }
+  .frame{
+    display: inline-block;
+  }
+</style>
+
+  <body>
+<div class="topBar">
+<p>Using JavaScript to Change the HTML</p>
+</div>
+<div class="frame">
+<div class="buttons">
+    <button type="button" onclick="sourceChanger(0)">0) Calculator</button>
+    <button type="button"  onclick="sourceChanger(1)">1) Hide / Show</button>
+    <button type="button"  onclick="sourceChanger(2)">2) Change 7 Styles</button>
+    <button type="button"  onclick="sourceChanger(3)">3) Add to Array</button>
+    <button type="button"  onclick="sourceChanger(4)">4) Over Out</button>
+    <button type="button"  onclick="sourceChanger(5)">5) Growing Image</button>
+    <button type="button"  onclick="sourceChanger(6)">6) Pixel Increase</button>
+    <button type="button"  onclick="sourceChanger(7)">7) Running Sum</button>
+    <button type="button"  onclick="sourceChanger(8)">8) Stach Change</button>
+ </div>
+   <iframe src="intro.html" width="800" height="700" id="frame"></iframe>
+ </div>
+  <div class="bottomBar">
+  <p>Ali Elbekov</p>
+ </div>
+
+ <script>
+ var sourcesList = ["calculator.html", "hideAndShow.html", "changeStyle.html",
+"addToArray.html", "hoverOver.html", "growingImage.html", "pixelIncrease.html",
+"runningSum.html", "pushPop.html"]
+function sourceChanger(index){
+document.getElementById('frame').src=sourcesList[index];
+
+}
+
+ </script>
+  </body>
+</html>

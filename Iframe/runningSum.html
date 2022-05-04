@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Running Sum</title>
+  </head>
+  <body>
+    <p>Enter a number: <input type="text" id = "inputArea"></p>
+    <p id = "writingArea">Sum of </p>
+  <script>
+    var currentNumbers =  [];
+    document.getElementById('inputArea').onkeydown = function(event) {
+        if (event.keyCode == 13) {
+          var inputValue = document.getElementById("inputArea").value;
+          document.getElementById("inputArea").value = "";
+          currentNumbers.push(Number(inputValue));
+          writer();
+        }
+    }
+    function writer(){
+      var theSum = 0;
+      document.getElementById('writingArea').innerHTML = 'sum of '
+      for(var i=0; i<currentNumbers.length-1; i++){
+          theSum+= currentNumbers[i];
+          var currentData = document.getElementById('writingArea').innerHTML
+          document.getElementById('writingArea').innerHTML  =
+          currentData+currentNumbers[i]+', ';
+      }
+      document.getElementById('writingArea').innerHTML  =
+      document.getElementById('writingArea').innerHTML+currentNumbers[i];
+      theSum = theSum+currentNumbers[i];
+      document.getElementById('writingArea').innerHTML  =
+      document.getElementById('writingArea').innerHTML+` = ${theSum}`;
+    }
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Add to an Array</title>
+  </head>
+  <body>
+<p>Enter a name: <input type="text" name="" id = "inputData"></p>
+<p>Array of names:</p>
+<div id="names">
+</div>
+<script>
+var currentNames =  [];
+document.getElementById('inputData').onkeydown = function(event) {
+    if (event.keyCode == 13) {
+      var inputValue = document.getElementById("inputData").value;
+      document.getElementById("inputData").value = "";
+      currentNames.push(inputValue);
+      writer();
+    }
+}
+
+function writer(){
+  document.getElementById("names").innerHTML = "";
+  for(var i = 0; i<currentNames.length; i++){
+    var currentLine = `${i+1}: ${currentNames[i]}<br>`
+    document.getElementById("names").innerHTML += currentLine;
+  }
+}
+</script>
+  </body>
+</html>
